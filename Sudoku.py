@@ -84,3 +84,22 @@ evil = [0,0,0,0,0,0,0,0,0
        ,0,5,8,0,4,3,0,0,0
        ,0,4,0,0,2,0,0,3,0
        ,0,6,7,0,8,1,0,9,4]
+
+circle =    "⓪①②③④⑤⑥⑦⑧⑨"
+sub =       "₀₁₂₃₄₅₆₇₈₉"
+nums =      "0123456789"
+
+def concat(arrarr):
+    out = []
+    for arr in arrarr:
+        out += arr
+    return out
+
+def findIn2d(arr,item):
+    for i, c in enumerate(arr):
+        if item in c:
+            return i
+    raise Exception("Item not found")
+
+def knit(arr1,arr2):
+    return [arr1[i]+arr2[i] for i,c in enumerate(arr1)]
